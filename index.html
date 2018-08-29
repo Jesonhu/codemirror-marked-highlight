@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue and Markdown 编辑器</title>
+  <link rel="stylesheet" href="./lib/codemirror-5.40.0/lib/codemirror.css">
+  <link rel="stylesheet" href="./lib/codemirror-5.40.0/theme/base16-dark.css">
+  <!-- <link rel="stylesheet" href="./lib/codemirror-5.40.0/theme/darcula.css"> -->
+  <link rel="stylesheet" href="./lib/codemirror-5.40.0/addon/fold/foldgutter.css">
+  <link rel="stylesheet" href="./public/style/common.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="./public/style/marked.css">
+  <link rel="stylesheet" href="./public/style/index.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 内容输入容器 start -->
+    <div class="code-wrap">
+      <form>
+        <textarea name="" id="code" cols="30" rows="10" v-model="codeValue">
+      </form>
+      </textarea>
+    </div>
+    <!-- 内容输入容器 start -->
+
+    <!-- 解析后容器 start-->
+    <div class="pased-wrap markdown-body" v-html="parsedValue"></div>
+    <!-- 解析后容器 start-->
+
+  </div>
+
+  <h5 style="text-align: center"><a href="./lib/codemirror-5.40.0/index.html" target="blank">使用参考</a></h5>
+
+  
+  <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+
+  <script src="./lib/codemirror-5.40.0/lib/codemirror.js"></script>
+  <script src="./lib/codemirror-5.40.0/mode/markdown/markdown.js"></script>
+  <script src="./lib/codemirror-5.40.0/mode/gfm/gfm.js"></script>
+  <script src="./lib/codemirror-5.40.0/mode/javascript/javascript.js"></script>
+
+  <script src="./lib/codemirror-5.40.0/addon/mode/overlay.js"></script>
+  <script src='./lib/codemirror-5.40.0/addon/edit/closetag.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/edit/continuelist.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/edit/closebrackets.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/scroll/annotatescrollbar.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/selection/active-line.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/selection/mark-selection.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/fold/foldcode.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/fold/xml-fold.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/fold/foldgutter.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/fold/comment-fold.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/fold/indent-fold.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/fold/brace-fold.js'></script>
+  <script src='./lib/codemirror-5.40.0/addon/fold/markdown-fold.js'></script>
+
+  <script src="https://cdn.bootcss.com/marked/0.4.0/marked.min.js"></script>
+  <script src="./public/script/index.js"></script>
+</body>
+</html>

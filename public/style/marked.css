@@ -7,15 +7,22 @@ body {
 	height:100%;
 	min-width:200px;
 }
-/* .code-wrap,
+.editor-wrap {
+  display:flex;
+  flex-wrap: nowrap;
+  min-height: 90%;
+  width:100%;
+}
+.code-wrap,
 .pased-wrap{
-	display:inline-block;
-	width:49%;
+	flex:1;
 	overflow:hidden;
 	box-sizing:border-box;
 	margin:0;
-	padding:10px;
-} */
+  padding:10px;
+  height: 100%;
+}
+
 
 /* [参考](https://jbt.github.io/markdown-editor/) */
 /* [generate-github-markdown-css](https://github.com/sindresorhus/generate-github-markdown-css) */
@@ -245,3 +252,10 @@ body {
   box-sizing: border-box;
   padding: 0;
 }
+
+
+/* Diy 样式 start */
+.markdown-body {
+  padding:10px;
+}
+/* Diy 样式 end */

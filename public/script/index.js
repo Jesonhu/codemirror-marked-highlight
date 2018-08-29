@@ -18,9 +18,6 @@ const Vm = {
         parsedValue: '<h2>内容</h2>'
       },
     });
-  },
-  getCode() {
-
   }
 }
 
@@ -70,9 +67,9 @@ const Codemirror = {
 /** marked 相关 */
 const Marked = {
   marked: marked,
-  rendererMd: null,
+  renderer: null,
   options: {
-    renderer: new marked.Renderer(),
+    // renderer: new marked.Renderer(),
     gfm: true,
     tables: true,
     breaks: false,

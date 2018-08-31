@@ -1,0 +1,52 @@
+.C-Markdown-Editor {
+  display:flex;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.C-Markdown-Editor .CodeMirror-wrap,
+.editor-preview-side {
+  flex: 1;
+  padding:0;
+}
+
+.C-Markdown-Editor .editor-preview-side {
+  display: none;
+}
+
+/** 工具栏相关 start */
+.C-Markdown-Editor.has-editor-toolbar {
+  padding-top:50px;
+}
+.C-Markdown-Editor .editor-toolbar {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 50px;
+  display:flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  background-color:green;
+}
+/** 工具栏相关 end */
+
+/** 预览相关 start */
+.C-Markdown-Editor.has-editor-side .editor-preview-side {
+  display:block;
+}
+/** 预览相关 end */
+
+
+/** 全屏相关 start */
+.C-Markdown-Editor.is-fullscreen {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+}
+/** 全屏相关 end */

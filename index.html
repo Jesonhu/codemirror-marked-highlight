@@ -13,21 +13,29 @@
   <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css">
   <link rel="stylesheet" href="./public/style/marked.css">
   <link rel="stylesheet" href="./public/style/index.css">
+  <link rel="stylesheet" href="./public/style/cmarkdowneditor.css">
 </head>
 <body>
-  <div id="app" class="editor-wrap">
-    <!-- 内容输入容器 start -->
-    <div class="code-wrap">
-      <form>
-        <textarea name="" id="code" cols="30" rows="10" v-model="codeValue">
-      </form>
-      </textarea>
-    </div>
-    <!-- 内容输入容器 start -->
+  <div id="app" style="padding: 100px 50px;">
+    <form class="C-Markdown-Editor has-editor-side has-editor-toolbar" id="Markdown-Editor">
 
-    <!-- 解析后容器 start-->
-    <div class="pased-wrap markdown-body hljs" v-html="parsedValue"></div>
-    <!-- 解析后容器 start-->
+      <!--工具栏容器 start  -->
+      <div class="editor-toolbar">
+        <span>侧</span>
+        <span>全</span>
+      </div>
+      <!--工具栏容器 end  -->
+
+      <!-- 内容输入容器 start -->
+      <div class="code-wrap CodeMirror-wrap">
+          <textarea id="code" class="CodeMirror"></textarea>
+      </div>
+      <!-- 内容输入容器 start -->
+
+      <!-- 解析后容器 start-->
+      <div class="pased-wrap markdown-body hljs editor-preview-side"></div>
+      <!-- 解析后容器 start-->
+    </form>
 
   </div>
 
@@ -58,6 +66,8 @@
 
   <script src="https://cdn.bootcss.com/marked/0.4.0/marked.min.js"></script>
   <script src="./lib/highlight/highlight.pack.js"></script>
-  <script src="./public/script/index.js"></script>
+  <!-- <script src="./public/script/index.js"></script> -->
+  <script src="./public/script/cMarkdown-editor/cMarkdown-editor.js"></script>
+  <script src="./public/script/test-editor.js"></script>
 </body>
 </html>

@@ -20,7 +20,6 @@ body {
 	box-sizing:border-box;
 	margin:0;
   padding:10px;
-  height: 100%;
 }
 
 
@@ -64,17 +63,6 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 1em;
-  margin-bottom: 16px;
-  font-weight: bold;
-  line-height: 1.4;
-}
 .markdown-body p,
 .markdown-body blockquote,
 .markdown-body ul,
@@ -85,7 +73,7 @@ body {
   margin-top: 0;
   margin-bottom: 16px;
 }
-.markdown-body h1 {
+/* .markdown-body h1 {
   margin: 0.67em 0;
   padding-bottom: 0.3em;
   font-size: 2.25em;
@@ -111,7 +99,7 @@ body {
 .markdown-body h6 {
   font-size: 1em;
   color: #777;
-}
+} */
 .markdown-body ol,
 .markdown-body ul {
   padding-left: 2em;
@@ -257,5 +245,16 @@ body {
 /* Diy 样式 start */
 .markdown-body {
   padding:10px;
+}
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  padding-bottom: 5px;
+  font-weight: bold;
+  line-height: 1.4;
+  border-bottom: 1px solid #eee;
 }
 /* Diy 样式 end */
